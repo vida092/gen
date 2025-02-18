@@ -1,0 +1,42 @@
+Agregar un nuevo tipo de seguro:
+
+Modifica la base de datos para incluir un nuevo tipo de seguro (Ejemplo: "Salud").
+Agrega al menos tres pólizas con este nuevo tipo.
+Obtener pólizas por tipo de seguro:
+
+Crea un endpoint GET /policies/type/{tipo} que devuelva todas las pólizas de un tipo específico.
+Mostrar la cantidad total asegurada por cliente:
+
+Crea un endpoint GET /policies/total/{cliente} que devuelva la suma del monto asegurado por un cliente.
+Ordenar las pólizas por monto asegurado:
+
+Modifica el endpoint /policies/ para devolver las pólizas ordenadas de mayor a menor monto asegurado.
+
+
+
+Agregar una nueva póliza mediante un POST:
+
+Implementa un endpoint POST /policies/ que permita agregar nuevas pólizas a la base de datos en memoria.
+Eliminar una póliza por ID:
+
+Implementa un endpoint DELETE /policies/{policy_id} para eliminar una póliza específica.
+Actualizar el monto asegurado de una póliza:
+
+Crea un endpoint PUT /policies/{policy_id} que permita modificar el monto asegurado de una póliza existente.
+Filtrar pólizas dentro de un rango de montos:
+
+Crea un endpoint GET /policies/range/{min_monto}/{max_monto} para devolver todas las pólizas con montos dentro del rango especificado.
+
+
+Calcular la prima de seguro estimada:
+
+Crea un endpoint GET /policies/premium/{policy_id} que calcule la prima del seguro aplicando una tasa de riesgo (Ejemplo: monto * 0.05).
+Determinar el cliente con mayor monto asegurado:
+
+Implementa un endpoint GET /policies/top-client/ que devuelva el nombre del cliente con el mayor monto total asegurado.
+Simular un aumento del 10% en los montos asegurados:
+
+Agrega un endpoint PUT /policies/increase/ que incremente en un 10% los montos asegurados de todas las pólizas.
+Predecir la prima de un nuevo cliente basado en datos históricos (modelo simple):
+
+Crea un endpoint POST /policies/predict-premium/ que reciba los datos de un nuevo cliente (tipo de seguro y monto asegurado) y devuelva una estimación de la prima con base en los datos actuales.
